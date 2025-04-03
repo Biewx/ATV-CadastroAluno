@@ -32,11 +32,11 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btnCadastro = new Button();
+            btnListar = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
+            btnLimpar = new Button();
             dataGridAlunos = new DataGridView();
             txtData = new MaskedTextBox();
             txtNome = new TextBox();
@@ -81,52 +81,55 @@
             label4.TabIndex = 3;
             label4.Text = "Telefone:";
             // 
-            // button1
+            // btnCadastro
             // 
-            button1.Location = new Point(12, 235);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 8;
-            button1.Text = "Cadastrar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCadastro.Location = new Point(12, 235);
+            btnCadastro.Name = "btnCadastro";
+            btnCadastro.Size = new Size(75, 23);
+            btnCadastro.TabIndex = 8;
+            btnCadastro.Text = "Cadastrar";
+            btnCadastro.UseVisualStyleBackColor = true;
+            btnCadastro.Click += button1_Click;
             // 
-            // button2
+            // btnListar
             // 
-            button2.Location = new Point(123, 235);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 9;
-            button2.Text = "Listar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnListar.Location = new Point(123, 235);
+            btnListar.Name = "btnListar";
+            btnListar.Size = new Size(75, 23);
+            btnListar.TabIndex = 9;
+            btnListar.Text = "Listar";
+            btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += button2_Click;
             // 
-            // button3
+            // btnEditar
             // 
-            button3.Location = new Point(230, 235);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 10;
-            button3.Text = "Editar";
-            button3.UseVisualStyleBackColor = true;
+            btnEditar.Location = new Point(230, 235);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(75, 23);
+            btnEditar.TabIndex = 10;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += button3_Click;
             // 
-            // button4
+            // btnExcluir
             // 
-            button4.Location = new Point(338, 235);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 11;
-            button4.Text = "Excluir";
-            button4.UseVisualStyleBackColor = true;
+            btnExcluir.Location = new Point(338, 235);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(75, 23);
+            btnExcluir.TabIndex = 11;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
-            // button5
+            // btnLimpar
             // 
-            button5.Location = new Point(450, 235);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 12;
-            button5.Text = "Limpar";
-            button5.UseVisualStyleBackColor = true;
+            btnLimpar.Location = new Point(450, 235);
+            btnLimpar.Name = "btnLimpar";
+            btnLimpar.Size = new Size(75, 23);
+            btnLimpar.TabIndex = 12;
+            btnLimpar.Text = "Limpar";
+            btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += button5_Click;
             // 
             // dataGridAlunos
             // 
@@ -135,6 +138,7 @@
             dataGridAlunos.Name = "dataGridAlunos";
             dataGridAlunos.Size = new Size(470, 150);
             dataGridAlunos.TabIndex = 13;
+            dataGridAlunos.CellContentDoubleClick += dataGridAlunos_CellContentDoubleClick;
             // 
             // txtData
             // 
@@ -177,11 +181,11 @@
             Controls.Add(txtNome);
             Controls.Add(txtData);
             Controls.Add(dataGridAlunos);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnLimpar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnListar);
+            Controls.Add(btnCadastro);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -200,11 +204,11 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button btnCadastro;
+        private Button btnListar;
+        private Button btnEditar;
+        private Button btnExcluir;
+        private Button btnLimpar;
         private DataGridView dataGridAlunos;
         private MaskedTextBox txtData;
         private TextBox txtNome;
